@@ -1,1 +1,29 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  list-style-type: none;
+}
+
+body {
+  background-color: #000;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  background-color: #fff;
+  width: 100vw;
+  height: 100px;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}/*# sourceMappingURL=style.css.map */
