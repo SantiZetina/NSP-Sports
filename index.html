@@ -4,30 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    
     <title>WORLD CUP</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
 </head>
-<body>
+<body onload="innit()">
     <header>
-        <h1>WORLD CUP DASHBOARD</h1>
+        <h1>WORLD CUP</h1>
         <nav>
             <ul class="header-nav">
-                <li>HOME</li>
-                <li>SCHEDULE</li>
-                <li>GAMES</li>
-                <li>HIGHLIGHTS</li>
+                <li><a>HOME</a></li>
+                <li><a>SCHEDULE</a></li>
+                <li><a>GAMES</a></li>
+                <li><a>HIGHLIGHTS</a></li>
             </ul>
         </nav>
     </header>
     <section class="main">
-        <div class="recent-games-container">
-
+        <div class="card recent-games-container">
+            <h2 class="card-title">RECENT GAMES</h2>
+            <div class="card-content-container">
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+            </div>
         </div>
-        <div class="game-highlights-container">
-
+        <div class="card game-highlights-container">
+            <h2 class="card-title">HIGHLIGHTS</h2>
+            <div class="card-content-container">
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+            </div>
         </div>
-        <div class="teams-container">
-
+        <div class="card teams-container">
+            <h2 class="card-title">TEAMS</h2>
+            <div class="card-content-container">
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+                <div class="card-content"></div>
+            </div>
         </div>
     </section>
 </body>
