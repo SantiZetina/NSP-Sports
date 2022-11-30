@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    
     <title>WORLD CUP</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" 
+        integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+        defer>
+    </script>
+    <script 
+        src="./scripts/script.js" 
+        defer>
+    </script>
 </head>
-<body>
+<body onload="innit()">
     <header>
-        <h1>WORLD CUP DASHBOARD</h1>
+        <h1>WORLD CUP <small><i>DASHBOARD</i></small></h1>
         <nav>
             <ul class="header-nav">
                 <li>HOME</li>
@@ -20,14 +33,14 @@
         </nav>
     </header>
     <section class="main">
-        <div class="recent-games-container">
-
+        <div class="card recent-games-container">
+            <h2 class="card-title">RECENT GAMES</h2>
         </div>
-        <div class="game-highlights-container">
-
+        <div class="card game-highlights-container">
+            <h2 class="card-title">HIGHLIGHTS</h2>
         </div>
-        <div class="teams-container">
-
+        <div class="card teams-container">
+            <h2 class="card-title">TEAMS</h2>
         </div>
     </section>
 </body>
