@@ -65,9 +65,6 @@ h1 {
   letter-spacing: 2px;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
 }
-h1 small i {
-  opacity: 0.5;
-}
 
 .header-nav {
   display: flex;
@@ -117,6 +114,8 @@ h1 small i {
 
 .card:nth-child(1) {
   background: radial-gradient(circle at bottom right, #2F394C 0%, rgba(86, 227, 159, 0.3) 100%);
+  background-size: 200% 100%;
+  background-position: 50% 0%;
 }
 
 .card:nth-child(2) {
@@ -133,7 +132,9 @@ h1 small i {
 }
 
 .card:nth-child(3) {
-  background: radial-gradient(circle at bottom left, #2F394C 0%, rgba(86, 227, 159, 0.3) 70%);
+  background: radial-gradient(circle at bottom left, #2F394C 0%, rgba(86, 227, 159, 0.3) 100%);
+  background-size: 200% 100%;
+  background-position: 50% 0%;
 }
 
 .card-title {

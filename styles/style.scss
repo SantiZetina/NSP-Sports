@@ -73,9 +73,6 @@ header::after {
 h1 {
     letter-spacing: 2px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
-    small i {
-        opacity: 0.5;
-    }
 }
 
 .header-nav {
@@ -122,6 +119,8 @@ h1 {
 
 .card:nth-child(1) {
     background: radial-gradient(circle at bottom right, $blue 0%, rgb(86, 227, 159, 0.3) 100%);
+    background-size: 200% 100%;
+    background-position: 50% 0%;
 }
 
 .card:nth-child(2) {
@@ -138,7 +137,9 @@ h1 {
 }
 
 .card:nth-child(3) {
-    background: radial-gradient(circle at bottom left, $blue 0%, rgb(86, 227, 159, 0.3) 70%);
+    background: radial-gradient(circle at bottom left, $blue 0%, rgb(86, 227, 159, 0.3) 100%);
+    background-size: 200% 100%;
+    background-position: 50% 0%;
 }
 
 .card-title {
