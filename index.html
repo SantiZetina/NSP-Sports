@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
     <script src="./scripts/script.js" defer></script>
 </head>
-<body onload="innit()">
+<body>
     <header>
         <h1>WORLD CUP</h1>
         <nav>
@@ -20,13 +20,14 @@
                 <li><a>SCHEDULE</a></li>
                 <li><a>GAMES</a></li>
                 <li><a>HIGHLIGHTS</a></li>
+                <li><a>ODDS</a></li>
             </ul>
         </nav>
     </header>
     <section class="main">
         <div class="card recent-games-container">
             <h2 class="card-title">RECENT GAMES</h2>
-            <div class="card-content-container">
+            <div class="card-content-container recent-content">
                 <div class="card-content"></div>
                 <div class="card-content"></div>
                 <div class="card-content"></div>
@@ -42,21 +43,17 @@
         <div class="card game-highlights-container">
             <h2 class="card-title">HIGHLIGHTS</h2>
             <div class="card-content-container">
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
+                <div class="highlights-content">
+
+                </div>
+                <div class="load-more-button-container">
+                    <button class="load-more-button" onclick="loadHighlights()">LOAD MORE</button>
+                </div>
             </div>
         </div>
         <div class="card teams-container">
             <h2 class="card-title">TEAMS</h2>
-            <div class="card-content-container">
+            <div class="card-content-container teams-content">
                 <div class="card-content"></div>
                 <div class="card-content"></div>
                 <div class="card-content"></div>
