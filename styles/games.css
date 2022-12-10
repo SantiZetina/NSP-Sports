@@ -1,0 +1,87 @@
+:root{
+    --primary: #DCF9EB;
+    --secondary:#2F394C;
+
+}
+div{
+    overflow-x:hidden;
+   overflow-y:auto;
+
+}
+.container {
+  max-width: 144rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.standingsHeading{
+    padding-top: 2rem;
+    font-size: 4rem;
+    color: var(--primary);
+}
+
+.pContainer{
+    padding: 2rem 0 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+.pointsTable {
+    box-shadow: 0 0 0.5rem 0.2rem #eeeee4;
+    border-radius: 0.5rem;
+}
+
+.groupHeading {
+    padding: 0.5rem 0;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: var(--secondary);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.pointsTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pointsTable table thead tr {
+    text-align: left;
+    background: var(--primary);
+}
+
+.pointsTable table thead tr th {
+    padding: 1rem;
+    color: var(--secondary);
+}
+
+.pointsTable table tbody tr:not(:last-child) {
+    border-bottom: 0.02rem solid rgba(118, 114, 115, 0.447);
+}
+
+.pointsTable table tbody tr:nth-child(1),
+.pointsTable table tbody tr:nth-child(2) {
+    background: #e1e7f1;
+    font-weight: bold;
+}
+
+.pointsTable table tbody tr td {
+    padding: 0.7rem 0;
+    text-align: center;
+}
+
+.teamFlag {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-position: center;
+    box-shadow: 0 0 0.5rem rgb(143, 112, 112);
+}
+.info {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

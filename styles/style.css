@@ -13,6 +13,9 @@ body {
   overflow: hidden;
 }
 
+.header-nav a{
+  text-decoration: none;
+}
 /* ------------------------------- SCROLL BAR ------------------------------- */
 ::-webkit-scrollbar {
   width: 7px;

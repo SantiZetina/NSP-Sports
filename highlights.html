@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Embed Youtube Demo</title>
+    <link rel="stylesheet" href="styles/videos.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
+</head>
+<body onload="innit()">
+    <header>
+        <h1>WORLD CUP</h1>
+        <nav>
+            <ul class="header-nav">
+                <li><a href="index.html" style="color: inherit;"target="blank">HOME</a></li>
+                <li><a href="./schedule.html" style="color: inherit;"target="blank">SCHEDULE</a></li>
+                <li><a href="games.html" style="color: inherit;"target="blank">GAMES</a></li>
+                <li><a>HIGHLIGHTS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 id="mainHighlight">Main Event</h1>
+    <div id="video-container">
+     <iframe id="video" src="" width="750" height="425" frameborder="0" allowfullscreen></iframe>
+        <div id="videoTitle"></div>
+    </div>
+    
+       <!-- <p id="description"></p> //still unsure how to add it --> 
+   
+    <br>
+        <h2 id="highlights">Past Games</h2>
+ <div class="videos">
+<div>
+<iframe class="latestVideoEmbed" vnum='1' width="450" height="255" frameborder="0" allowfullscreen></iframe>
+</div>
+                                            
+<div>
+<iframe class="latestVideoEmbed" vnum='2' width="450" height="255" frameborder="0" allowfullscreen></iframe>
+</div>
+                                            
+<div>
+<iframe class="latestVideoEmbed" vnum='3' width="450" height="255" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div>
+    <iframe class="latestVideoEmbed" vnum='4' width="450" height="255" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+    <script src="./scripts/videos.js"></script>
+</body>
+</html>
