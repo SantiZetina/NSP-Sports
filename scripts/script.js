@@ -1,9 +1,28 @@
 /* ----------------------------- INNIT FUNCTION ----------------------------- */
 
 function innit() {
+    callAPI()
     introAnimation.play()
+    
 }
-
+function callAPI() {
+    fetch("http://api.openweathermap.org/data/2.5/weather?q=qatar&appid=a98ea5a721efeed5149551b68c67185d")
+        .then(response => response.json())
+        .then(data => {
+            displayData(data);
+            });
+    }
+    // Display the data on the page
+    function displayData(data) {
+        // Create a <div> element to hold the data
+        let temperature = data["main"]["temp"];
+        let humidity = data["main"]["humidity"];
+        let wind_speed = data["wind"]["speed"];
+        
+        let div = document.getElementById("Weather");
+        // Set the innerHTML of the <div> to the data
+        div.innerHTML =temperature.toString()+"K<br>"+humidity.toString()+"% humidity<br>"+wind_speed.toString()+"wind m/s<br>";
+    }
 /* ----------------------------- INTRO ANIMATION ---------------------------- */
 
 let introAnimation = gsap.timeline({paused: true, delay: 1})
