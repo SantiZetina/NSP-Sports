@@ -1,4 +1,6 @@
-
+body{
+  overflow-x: hidden;
+}
 
 :root{
     --primary: #DCF9EB;
