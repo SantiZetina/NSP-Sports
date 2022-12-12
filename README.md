@@ -1,5 +1,5 @@
-# Project1
-World Cup is a website utilizing HTML, CSS, and JavaScript to bring you the World Cup anywhere you go.
+# NSP Sports
+NSP Sports is a website utilizing HTML, CSS, and JavaScript to bring you the World Cup anywhere you go.
 Utilizing API's the website automatically updates scores, highlights and the weather.
 ## Site 
 https://santizetina.github.io/project-1/
