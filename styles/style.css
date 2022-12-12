@@ -333,6 +333,7 @@ h1 {
 
 /* ---------------------------- LOAD MORE BUTTON ---------------------------- */
 .load-more-button-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -355,8 +356,21 @@ h1 {
   background-color: rgba(86, 227, 159, 0.2);
   border-radius: 10px;
 }
-
-.load-more-button {
+.load-more-button-container .loading-img-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.load-more-button-container .loading-img-container img {
+  visibility: hidden;
+  filter: invert(98%) sepia(60%) saturate(260%) hue-rotate(69deg) brightness(101%) contrast(95%);
+  -webkit-animation: looping-rotation 1.5s linear infinite;
+          animation: looping-rotation 1.5s linear infinite;
+  opacity: 0.75;
+}
+.load-more-button-container .load-more-button {
+  visibility: visible;
   padding: 5px 15px;
   color: rgb(220, 249, 235);
   background-color: rgba(86, 227, 159, 0.2);
@@ -365,10 +379,34 @@ h1 {
   white-space: nowrap;
   letter-spacing: 1px;
 }
-.load-more-button:hover {
+.load-more-button-container .load-more-button:hover {
   background-color: rgba(86, 227, 159, 0.452);
 }
 
+.loading .loading-img-container img {
+  visibility: visible;
+}
+.loading .load-more-button {
+  visibility: hidden;
+}
+
+@-webkit-keyframes looping-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes looping-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* ---------------------------- RESPONSIVE DESIGN --------------------------- */
 @media screen and (max-width: 1900px) {
   body {

@@ -343,6 +343,7 @@ h1 {
 /* ---------------------------- LOAD MORE BUTTON ---------------------------- */
 
 .load-more-button-container {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -364,18 +365,48 @@ h1 {
         background-color: rgb(86, 227, 159, 0.2);
         border-radius: 10px;
     }
+    .loading-img-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+            visibility: hidden;
+            filter: invert(98%) sepia(60%) saturate(260%) hue-rotate(69deg) brightness(101%) contrast(95%);
+            animation: looping-rotation 1.5s linear infinite;
+            opacity: 0.75;
+        }
+    }
+    .load-more-button {
+        visibility: visible;
+        padding: 5px 15px;
+        color: $mint;
+        background-color: rgb(86, 227, 159, 0.2);
+        border: none;
+        border-radius: 100px;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        &:hover {
+            background-color: rgba(86, 227, 159, 0.452);
+        }
+    }
 }
 
-.load-more-button {
-    padding: 5px 15px;
-    color: $mint;
-    background-color: rgb(86, 227, 159, 0.2);
-    border: none;
-    border-radius: 100px;
-    white-space: nowrap;
-    letter-spacing: 1px;
-    &:hover {
-        background-color: rgba(86, 227, 159, 0.452);
+.loading {
+    .loading-img-container img {
+        visibility: visible;
+    }
+    .load-more-button {
+        visibility: hidden;
+    }
+}
+
+@keyframes looping-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
