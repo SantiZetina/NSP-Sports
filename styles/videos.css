@@ -1,5 +1,4 @@
 
-
 .videos{
     display: flex;
     justify-content: center;
@@ -18,19 +17,30 @@
   
   }
 
-
- #videoTitle,
   #mainHighlight{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 290px;
+  color: #DCF9EB;
+  width: 100vw;
+  height: 30px;
+  padding-top: 100px;
+  }
+
+#videoTitle{
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
-  color: #DCF9EB;
-  width: 100vw;
-  height: 70px;
-  }
+  padding-left: 120px;
+color: #DCF9EB;
+width: 100vw;
+height: 30px;
+}
 
 #highlights{
   display: grid;
@@ -47,7 +57,7 @@
 }
 
 #description{
-  padding: 40px;
+  padding: 40px 40px 40px 40px;
   width: 50%;
   height: calc(100% - 50px);
   overflow-y: scroll;
