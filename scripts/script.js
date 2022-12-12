@@ -60,7 +60,7 @@ function fetchAPIs() {
             recentGamesCardContent.classList.add('card-content')
             if (e.home_team.goals || e.home_team.goals === 0) {
                 recentGamesCardContent.innerHTML = `
-                    <div class="recent-games-flag" data-country="${e.away_team.name}">
+                    <div class="flag" data-country="${e.away_team.name}">
                         <img src="https://countryflagsapi.com/png/${e.away_team.name}">  
                     </div>
                     <div class="recent-games-information">
@@ -68,7 +68,7 @@ function fetchAPIs() {
                         <p style="opacity: 0.5">${gameDate.toDateString().slice(4)}</p>
                         <p></p>
                     </div>
-                    <div class="recent-games-flag" data-country="${e.home_team.name}">
+                    <div class="flag" data-country="${e.home_team.name}">
                         <img src="https://countryflagsapi.com/png/${e.home_team.name}">
                     </div>`
                 recentGamesContainer.prepend(recentGamesCardContent)
@@ -99,7 +99,9 @@ function fetchAPIs() {
                 let teamsCardContent = document.createElement('div') // add team information
                 teamsCardContent.classList.add('card-content')
                 teamsCardContent.innerHTML = `
-                    <img src="https://countryflagsapi.com/png/${e.name}"></img>
+                    <div class="flag" data-country="${e.name}">
+                        <img src="https://countryflagsapi.com/png/${e.name}"></img>
+                    </div>
                     <div class="team-information">
                         <div class="team-information-left">
                             <p class="property">WINS:</p><p class="value"><b>${e.wins}</b></p>

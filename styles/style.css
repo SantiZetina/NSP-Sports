@@ -9,9 +9,8 @@
 }
 
 body {
-
   background-color: rgb(31, 39, 51);
- 
+  overflow: hidden;
 }
 
 .truncated {
@@ -87,7 +86,7 @@ header::after {
   opacity: 0.5;
 }
 
-h1#title {
+h1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -211,7 +210,6 @@ h1#title {
   background: rgba(86, 227, 159, 0.2);
   border-radius: 7px;
   margin: 20px 0;
-
   opacity: 0;
   transform: scale(0.5);
 }
@@ -249,13 +247,27 @@ h1#title {
   font-size: 2.5rem;
   color: rgb(220, 249, 235);
 }
-#recent-games-container .card-content .recent-games-flag {
+#recent-games-container .card-content .recent-games-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+#recent-games-container .card-content .coming-soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flag {
   position: relative;
   height: 100%;
   aspect-ratio: 16/9;
   transition: all 0.35s;
 }
-#recent-games-container .card-content .recent-games-flag::after {
+.flag::after {
   content: attr(data-country);
   letter-spacing: 1px;
   position: absolute;
@@ -271,25 +283,12 @@ h1#title {
   transition: all 0.35s;
   white-space: nowrap;
 }
-#recent-games-container .card-content .recent-games-flag:hover {
+.flag:hover {
   transform: translateY(-15px);
 }
-#recent-games-container .card-content .recent-games-flag:hover::after {
+.flag:hover::after {
   transform: translate(-50%, 125%);
   opacity: 1;
-}
-#recent-games-container .card-content .recent-games-information {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-}
-#recent-games-container .card-content .coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* ------------------------------ TEAMS SECTION ----------------------------- */
@@ -468,4 +467,3 @@ h1#title {
     height: auto;
   }
 }/*# sourceMappingURL=style.css.map */
-

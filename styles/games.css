@@ -1,5 +1,6 @@
 body{
   overflow-x: hidden;
+  overflow-y: visible;
 }
 
 :root{
@@ -9,7 +10,7 @@ body{
 }
 div{
     overflow-x:hidden;
-   overflow-y:auto;
+    overflow-y:auto;
 
 }
 .container {
@@ -22,6 +23,10 @@ div{
 }
 
 .standingsHeading{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
     padding-top: 2rem;
     font-size: 4rem;
     color: #DCF9EB;
@@ -38,6 +43,10 @@ div{
 }
 
 .groupHeading {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
     padding: 0.5rem 0;
     font-size: 2.5rem;
     text-align: center;
