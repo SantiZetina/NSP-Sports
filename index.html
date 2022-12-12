@@ -8,67 +8,43 @@
     <title>WORLD CUP</title>
 
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
     <script src="./scripts/script.js" defer></script>
 </head>
-<body onload="innit()">
+<body>
     <header>
+        <li><div id="Weather" class="weather-api"></li>
         <h1>WORLD CUP</h1>
         <nav>
             <ul class="header-nav">
-                <li><div style="font-size:small" id="Weather"></li>
-                <li><a>HOME</a></li>
-                <li><a href="./schedule.html" style="color: inherit;"target="blank">SCHEDULE</a></li>
-                <li><a href="games.html" style="color: inherit;"target="blank">GAMES</a></li>
-                <li><a href="highlights.html" style="color: inherit;"target="blank">HIGHLIGHTS</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="schedule.html" target="blank">SCHEDULE</a></li>
+                <li><a href="games.html" target="blank">GAMES</a></li>
+                <li><a href="highlights.html" target="blank">HIGHLIGHTS</a></li>
             </ul>
         </nav>
     </header>
     <section class="main">
         <div class="card recent-games-container">
             <h2 class="card-title">RECENT GAMES</h2>
-            <div class="card-content-container">
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-            </div>
+            <div class="card-content-container" id="recent-games-container"></div>
         </div>
         <div class="card game-highlights-container">
             <h2 class="card-title">HIGHLIGHTS</h2>
             <div class="card-content-container">
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
+                <div class="highlights-content"></div>
+                <div class="load-more-button-container">
+                    <button class="load-more-button" onclick="loadHighlights('.highlights-content')">LOAD MORE</button>
+                    <div class="loading-img-container">
+                        <img src="./img/loader.svg" alt="loading image">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="card teams-container">
             <h2 class="card-title">TEAMS</h2>
-            <div class="card-content-container">
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-            </div>
+            <div class="card-content-container" id="teams-container"></div>
         </div>
     </section>
 </body>
