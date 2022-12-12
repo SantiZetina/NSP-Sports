@@ -13,6 +13,12 @@ body {
   overflow: hidden;
 }
 
+.truncated {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 /* ------------------------------- SCROLL BAR ------------------------------- */
 ::-webkit-scrollbar {
   width: 7px;
@@ -62,7 +68,6 @@ header::after {
 }
 
 .weather-api {
-  position: relative;
   display: flex;
   flex-direction: row;
   gap: 25px;
@@ -82,6 +87,10 @@ header::after {
 }
 
 h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   letter-spacing: 2px;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
 }
@@ -129,7 +138,7 @@ h1 {
   background-size: 100%;
   background-position: 0% 0%;
   border: 2px solid rgb(84, 227, 158);
-  width: 100%;
+  width: 33%;
   height: 100%;
   padding: 30px;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(86, 227, 159, 0.5);
@@ -214,9 +223,11 @@ h1 {
 }
 
 .highlight-video-information {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   color: rgb(206, 206, 206);
+  width: 90%;
 }
 .highlight-video-information h3 {
   font-size: 0.75rem;
@@ -224,25 +235,25 @@ h1 {
   letter-spacing: 1px;
 }
 .highlight-video-information p {
+  letter-spacing: 1px;
   font-size: 0.75rem;
-  font-weight: 200;
   opacity: 0.75;
 }
 
 /* ------------------------------ RECENT GAMES ------------------------------ */
-.recent-content .card-content {
+#recent-games-container .card-content {
   justify-content: space-between;
   align-items: center;
   font-size: 2.5rem;
   color: rgb(220, 249, 235);
 }
-.recent-content .card-content .recent-game-img-container {
+#recent-games-container .card-content .recent-games-flag {
   position: relative;
   height: 100%;
   aspect-ratio: 16/9;
   transition: all 0.35s;
 }
-.recent-content .card-content .recent-game-img-container::after {
+#recent-games-container .card-content .recent-games-flag::after {
   content: attr(data-country);
   letter-spacing: 1px;
   position: absolute;
@@ -256,13 +267,68 @@ h1 {
   background-color: rgba(31, 39, 51, 0.6);
   opacity: 0;
   transition: all 0.35s;
+  white-space: nowrap;
 }
-.recent-content .card-content .recent-game-img-container:hover {
+#recent-games-container .card-content .recent-games-flag:hover {
   transform: translateY(-15px);
 }
-.recent-content .card-content .recent-game-img-container:hover::after {
+#recent-games-container .card-content .recent-games-flag:hover::after {
   transform: translate(-50%, 125%);
   opacity: 1;
+}
+#recent-games-container .card-content .recent-games-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+#recent-games-container .card-content .coming-soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ------------------------------ TEAMS SECTION ----------------------------- */
+.group-divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.group-divider .horizontal-line {
+  position: relative;
+  width: 25%;
+  height: 2px;
+  background-color: rgb(220, 249, 235);
+  opacity: 0.5;
+}
+.group-divider p {
+  color: rgb(220, 249, 235);
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.team-information {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.7rem;
+}
+.team-information .property {
+  color: rgb(220, 249, 235);
+  width: 70%;
+  display: inline-block;
+  text-align: right;
+  letter-spacing: 1px;
+}
+.team-information .value {
+  color: rgb(220, 249, 235);
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+  transform: translateX(10px);
+  letter-spacing: 1px;
 }
 
 /* ---------------------------- LOAD MORE BUTTON ---------------------------- */
@@ -301,4 +367,60 @@ h1 {
 }
 .load-more-button:hover {
   background-color: rgba(86, 227, 159, 0.452);
+}
+
+/* ---------------------------- RESPONSIVE DESIGN --------------------------- */
+@media screen and (max-width: 1900px) {
+  body {
+    overflow-y: visible;
+  }
+  .card {
+    background: radial-gradient(at bottom, rgb(46, 57, 77) 15%, rgba(86, 227, 159, 0.3) 100%);
+    height: 30%;
+    width: 75%;
+  }
+  .main {
+    height: 300vh;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1300px) {
+  header {
+    z-index: 1;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 115px;
+  }
+  h1 {
+    left: 15%;
+  }
+  .header-nav {
+    transform: translateY(-5px);
+  }
+}
+@media screen and (max-width: 950px) {
+  header {
+    height: 150px;
+  }
+  h1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  .card {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .highlights-content a .card-content, #teams-container .card-content {
+    flex-direction: column;
+    height: auto;
+    overflow-x: hidden;
+  }
+  .highlights-content a .card-content img, #teams-container .card-content img {
+    max-width: 100%;
+    height: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

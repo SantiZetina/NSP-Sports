@@ -8,13 +8,14 @@
     <title>WORLD CUP</title>
 
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
     <script src="./scripts/script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>WORLD CUP</h1>
         <li><div id="Weather" class="weather-api"></li>
+        <h1>WORLD CUP</h1>
         <nav>
             <ul class="header-nav">
                 <li><a href="#">HOME</a></li>
@@ -27,18 +28,7 @@
     <section class="main">
         <div class="card recent-games-container">
             <h2 class="card-title">RECENT GAMES</h2>
-            <div class="card-content-container">
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-            </div>
+            <div class="card-content-container" id="recent-games-container"></div>
         </div>
         <div class="card game-highlights-container">
             <h2 class="card-title">HIGHLIGHTS</h2>
@@ -51,18 +41,7 @@
         </div>
         <div class="card teams-container">
             <h2 class="card-title">TEAMS</h2>
-            <div class="card-content-container">
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-                <div class="card-content"></div>
-            </div>
+            <div class="card-content-container" id="teams-container"></div>
         </div>
     </section>
 </body>
