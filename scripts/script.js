@@ -39,7 +39,7 @@ function introAnimation() { // simple intro animation
 /* ------------------------------ API FUNCTIONS ----------------------------- */
 
 function fetchAPIs() {
-    fetch("http://api.openweathermap.org/data/2.5/weather?q=qatar&appid=a98ea5a721efeed5149551b68c67185d") // home screen nav bar weather api
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=qatar&appid=a98ea5a721efeed5149551b68c67185d") // home screen nav bar weather api
     .then(response => response.json())
     .then(data => {
         document.getElementById("Weather").innerHTML = `
