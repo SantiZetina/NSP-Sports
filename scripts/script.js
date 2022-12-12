@@ -1,9 +1,5 @@
 /* ---------------------------- RANDOM FUNCTIONS ---------------------------- */
 
-function truncate(str, n){ // got this function from https://stackoverflow.com/questions/1199352/smart-way-to-truncate-long-strings
-    return (str.length > n) ? str.slice(0, n-1) + '&hellip;' : str;
-}
-
 function kelvinToFerinheight(temp) {
     return Math.round(1.8 * (temp - 273) + 32) 
 }
@@ -158,7 +154,7 @@ async function loadHighlights(container) {
         containerEl.append(contentContainer)
     }
     highlightsIndex >= 10 && gsap.set('.card-content', {opacity: 1, scale: 1}) // makes sure intro animation doesnt interfear with loading more
-    highlightsIndex += 1
+    highlightsIndex += 10
     if (highlightsIndex > 10) {
         pageToken = `&pageToken=${youtubeAPI.nextPageToken}`
     }

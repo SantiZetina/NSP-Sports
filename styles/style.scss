@@ -5,8 +5,6 @@ $lightblue: rgb(31, 39, 51);
 $blue: rgb(46, 57, 77);
 $green: rgb(84, 227, 158);
 $mint: rgb(220, 249, 235);
-$lavender-blue: #c7b8ea;
-$bisque: #fcdebe;
 
 * {
     margin: 0;
@@ -441,11 +439,15 @@ h1 {
     .header-nav {
         transform: translateY(-5px);
     }
+    .main {
+        position: relative;
+        top: 115px;
+    }
 }
 
 @media screen and (max-width: 950px) {
     header {
-        height: 150px;
+        height: 175px;
     }
     h1 {
         position: relative;
